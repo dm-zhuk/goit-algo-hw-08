@@ -28,9 +28,18 @@ def min_cost_to_connect_cables(cables):
 cables1 = [1]
 cables2 = [1, 2, 3]
 cables3 = [8, 4, 6, 12]
-cables4 = [48, 10, 13, 19, 32, 23, 12, 11]
+total_min_cost = min_cost_to_connect_cables(cables3)
 
 print(min_cost_to_connect_cables(cables1))
 print(min_cost_to_connect_cables(cables2))
-print(min_cost_to_connect_cables(cables3))
-print(min_cost_to_connect_cables(cables4))
+print(f"The minimal cost to combine cables is: {total_min_cost}")
+
+"""
+1.Connect 4 and 6, new cable = 10.
+Heap becomes [8, 10, 12].
+2.Connect 8 and 10, new cable = 18.
+Heap now [12, 18].
+3.Connect 12 and 18, new cable = 30.
+
+Total cost = 10 + 18 + 30 = 58.
+"""
