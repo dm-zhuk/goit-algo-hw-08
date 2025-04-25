@@ -4,13 +4,12 @@ import heapq
 
 
 def min_cost_to_connect_cables(cables):
-    # Transform the list into a min-heap in O(n) time
+    # Transform the list into a min-heap
     heapq.heapify(cables)
     total_cost = 0
 
-    # Continue until only one cable remains
     while len(cables) > 1:
-        # Remove and return the smallest element in O(log n)
+        # Remove and return the smallest element
         first = heapq.heappop(cables)
         second = heapq.heappop(cables)
 
@@ -38,7 +37,7 @@ print(f"The minimal cost to combine cables is: {total_min_cost}")
 1.Connect 4 and 6, new cable = 10.
 Heap becomes [8, 10, 12].
 2.Connect 8 and 10, new cable = 18.
-Heap now [12, 18].
+Heap is now [12, 18].
 3.Connect 12 and 18, new cable = 30.
 
 Total cost = 10 + 18 + 30 = 58.
